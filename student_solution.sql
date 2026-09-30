@@ -1,16 +1,10 @@
 
-CREATE DATABASE CollegeDB;
 USE CollegeDB;
-CREATE TABLE Course (
-    CourseID INT PRIMARY KEY,
-    CourseName VARCHAR(30) NOT NULL,
-    Credits INT,
-    DepartmentID INT
+
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(20) NOT NULL,
+    DOB DATE NOT NULL,
+    Gender VARCHAR(10) NOT NULL,
+    DepartmentID INT NOT NULL
 );
-INSERT INTO Course (CourseID, CourseName, Credits, DepartmentID)
-VALUES
-(201, 'Database Systems', 4, 101),
-(202, 'Data Structures', 3, 101),
-(203, 'Computer Networks', 4, 102);
-DESCRIBE Course
-SELECT * FROM Course;
